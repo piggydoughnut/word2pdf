@@ -10,11 +10,11 @@ It is exactly the same, just replaces async/await with promises.
 
 Run cmd with
 ```sh
-npm i word2pdf
+npm i word2pdf-promises
 ```
  or
  ```sh
- yarn add word2pdf
+ yarn add word2pdf-promises
  ```
 
 # Uses
@@ -22,13 +22,13 @@ npm i word2pdf
 Example
 
 ```javascript
-const word2pdf = require('word2pdf');
+const word2pdf = require('word2pdf-promises');
 const fs = require('fs');
 
-const convert =  () => {
+const convert = () => {
 	word2pdf('test.docx')
-  .then(data => {
-	   fs.writeFileSync('test.pdf', data);    
-  })
+		.then(data => {
+			fs.writeFileSync('test.pdf', data);
+		})
 }
 ```
