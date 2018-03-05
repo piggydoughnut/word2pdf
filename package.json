@@ -1,13 +1,13 @@
 {
-  "name": "word2pdf",
-  "version": "1.0.7",
-  "description": "Convert doc, docx to pdf",
-  "main": "index.js",
-  "author": "Vuong Vu <vuongvu333@gmail.com>",
-  "repository": "https://github.com/VuongVu/word2pdf",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "request": "^2.83.0"
-  }
+	"name": "word2pdf-promises",
+	"version": "1.0.0",
+	"description": "Convert doc, docx to pdf, using promises",
+	"main": "index.js",
+	"author": "Vuong Vu <vuongvu333@gmail.com>",
+	"repository": "https://github.com/VuongVu/word2pdf",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"request": "^2.83.0"
+	}
 }

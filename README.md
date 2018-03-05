@@ -1,15 +1,23 @@
-#Install package 
+# About
 
-Run cmd with 
+Original package can be found at https://github.com/VuongVu/word2pdf
+
+I created this fork because I ran into issues when using this package for AWS Lambda, which does not support the newest node version (async/await).
+
+It is exactly the same, just replaces async/await with promises.
+
+# Install package
+
+Run cmd with
 ```sh
 npm i word2pdf
 ```
- or 
+ or
  ```sh
  yarn add word2pdf
  ```
 
-#Use
+# Uses
 
 Example
 
@@ -17,9 +25,10 @@ Example
 const word2pdf = require('word2pdf');
 const fs = require('fs');
 
-const convert = async () => {
-	const data = await word2pdf('test.docx')
-	fs.writeFileSync('test.pdf', data);
+const convert =  () => {
+	word2pdf('test.docx')
+  .then(data => {
+	   fs.writeFileSync('test.pdf', data);    
+  })
 }
 ```
-
