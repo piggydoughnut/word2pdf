@@ -48,4 +48,11 @@ const word2pdf = (path) => {
 		})
 }
 
-module.exports = word2pdf;
+const word2pdfBuffer = (buffer) => {
+	return convert(buffer);
+}
+
+module.exports = {
+	word2pdf,
+	word2pdfBuffer
+}

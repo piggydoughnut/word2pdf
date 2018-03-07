@@ -2,11 +2,7 @@
 
 Original package can be found at https://github.com/VuongVu/word2pdf
 
-**word2pdf-promises** allows you to convert `doc/x` files to `pdf` files.
-
 I created this fork because I ran into issues when using this package for AWS Lambda, which does not support the newest node version (async/await).
-
-It is exactly the same, just replaces async/await with promises.
 
 # Install package
 
@@ -21,14 +17,27 @@ npm i word2pdf-promises
 
 # Uses
 
-Example
-
 ```javascript
 const word2pdf = require('word2pdf-promises');
 const fs = require('fs');
+```
 
+Using file path
+
+```javascript
 const convert = () => {
-	word2pdf('test.docx')
+	word2pdf.word2pdf('test.docx')
+		.then(data => {
+			fs.writeFileSync('test.pdf', data);
+		})
+}
+```
+
+Using Buffer
+
+```javascript
+const convert = () => {
+	word2pdf.word2pdfBuffer(bufferObject)
 		.then(data => {
 			fs.writeFileSync('test.pdf', data);
 		})
