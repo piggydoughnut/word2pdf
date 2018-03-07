@@ -1,6 +1,6 @@
 {
 	"name": "word2pdf-promises",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Convert doc, docx to pdf, using promises",
 	"main": "index.js",
 	"author": "Vuong Vu <vuongvu333@gmail.com>",
