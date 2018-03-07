@@ -2,6 +2,8 @@
 
 Original package can be found at https://github.com/VuongVu/word2pdf
 
+**word2pdf-promises** allows you to convert `doc/x` files to `pdf` files.
+
 I created this fork because I ran into issues when using this package for AWS Lambda, which does not support the newest node version (async/await).
 
 It is exactly the same, just replaces async/await with promises.
